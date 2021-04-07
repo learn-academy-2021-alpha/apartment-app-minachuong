@@ -135,3 +135,13 @@ app/assets/stylesheets/application.scss
 - Passing in Devise routes to Header
 - Conditionally render sign in and sign out
 - Create a test user - email: s@testing.com, password: test123
+
+
+### Adding Font Awesome Icons
+- yarn add @fortawesome/fontawesome-svg-core
+- yarn add @fortawesome/free-solid-svg-icons
+- yarn add @fortawesome/react-fontawesome
+- import { faHome, faCity } from "@fortawesome/free-solid-svg-icons";
+- import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+- <FontAwesomeIcon icon={ faHome } />
+- <FontAwesomeIcon icon={ faCity } />

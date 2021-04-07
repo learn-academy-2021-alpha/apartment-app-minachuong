@@ -21,9 +21,9 @@ class App extends Component {
     const {
       logged_in,
       current_user,
-      new_user_route,
       sign_in_route,
-      sign_out_route
+      sign_out_route,
+      sign_up_route
     } = this.props
     const { apartments } = this.state
     console.log("logged_in:", logged_in)
@@ -34,10 +34,10 @@ class App extends Component {
           logged_in={ logged_in }
           sign_in_route={ sign_in_route }
           sign_out_route={ sign_out_route }
-          sign_up_route={ sign_up_route }
         />
         <Switch>
           <Route exact path="/" component={ Home } />
+          <Route path="/apartment-index" render={ (props) => <ApartmentIndex apartments={ apartments } /> } />
           <Route component={ NotFound } />
         </Switch>
       </Router>

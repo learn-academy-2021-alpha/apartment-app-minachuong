@@ -12,19 +12,16 @@ class Header extends Component {
     } = this.props
     return (
       <div className="header-main">
-        <img src={ apartmentIcon } alt="apartment app icon" className="icon" />
+        <NavLink to="/"><img src={ apartmentIcon } alt="apartment app icon" className="icon" /></NavLink>
         <Nav>
           <NavItem>
-            <NavLink to="#">Link</NavLink>
+            <NavLink to="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="#">Link</NavLink>
+            <NavLink to="/apartment-index">All the Apartments</NavLink>
           </NavItem>
           <NavItem>
             <NavLink to="#">Another Link</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="#">Disabled Link</NavLink>
           </NavItem>
           { logged_in &&
             <NavItem>
