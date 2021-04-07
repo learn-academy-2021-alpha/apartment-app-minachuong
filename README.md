@@ -21,7 +21,7 @@ $ rails db:migrate
 Add the following configuration to config/environments/development.rb:
 `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
 
-Verify that you can view Devise forms by visiting: 
+Verify that you can view Devise forms by visiting:
 `http://localhost:3000/users/sign_in` and `http://localhost:3000/users/sign_up`
 
 ### Create the Apartment resource
@@ -109,3 +109,29 @@ Change configuration for using default method for ending using session in devise
 ```ruby
 config.sign_out_via = :get
 ```
+
+### Added React Router
+```
+$ yarn add react-router-dom
+```
+
+### Added Reactstrap
+```
+$ bundle add bootstrap
+$ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+$ yarn add reactstrap
+```
+app/assets/stylesheets/application.scss
+```
+@import 'bootstrap';
+```
+
+### File Structure
+- Assets folder
+- Components folder
+- Pages folder
+
+### Header Component
+- Passing in Devise routes to Header
+- Conditionally render sign in and sign out
+- Create a test user - email: s@testing.com, password: test123
