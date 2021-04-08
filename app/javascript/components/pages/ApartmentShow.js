@@ -26,7 +26,6 @@ class ApartmentShow extends Component {
               <h5><FontAwesomeIcon icon={ faToiletPaper } className="fa-icon" />Bathrooms: { apartment.bathrooms }</h5>
               <h5><FontAwesomeIcon icon={ faPaw } className="fa-icon" />Pets Allowed: { apartment.pets }</h5>
             </div>
-
         </div>
       </>
     )

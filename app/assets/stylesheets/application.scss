@@ -86,6 +86,20 @@ p.card-button {
   margin: 100px;
 }
 
+// --PROTECTED INDEX--
+.my-show-card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 12px 22px 0 rgba(0, 0, 0, 0.19);
+  padding: 40px;
+}
+.my-card-button {
+  display: flex;
+  justify-content: center;  
+}
+
 @media (max-width:500px) {
   .nav {
     margin-top: 0px;

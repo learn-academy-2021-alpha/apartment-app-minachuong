@@ -5,6 +5,7 @@ import ApartmentIndex from './pages/ApartmentIndex'
 import ApartmentShow from './pages/ApartmentShow'
 import ApartmentNew from './pages/ApartmentNew'
 import MyApartmentIndex from './pages/MyApartmentIndex'
+import ApartmentEdit from './pages/ApartmentEdit'
 import NotFound from './pages/NotFound'
 import {
   BrowserRouter as Router,
@@ -23,6 +24,14 @@ class App extends Component {
 
   createNewApartment = (apartment) => {
     console.log(apartment)
+  }
+
+  editApartment = (apartment, id) => {
+    console.log(apartment, id)
+  }
+
+  deleteApartment = (id) => {
+    console.log(id)
   }
 
   render() {
@@ -60,7 +69,12 @@ class App extends Component {
               path="/myapartments"
               render={ (props) => {
                 let myApartments = apartments.filter(apartment => apartment.user_id === current_user.id)
-                return <MyApartmentIndex myApartments={ myApartments } />
+                return (
+                  <MyApartmentIndex
+                    myApartments={ myApartments }
+                    deleteApartment={ this.deleteApartment }
+                  />
+                )
               }}
             />
           }
@@ -73,6 +87,21 @@ class App extends Component {
                   current_user={ current_user }
                 />
               }
+            />
+          }
+          { logged_in &&
+            <Route
+              path="/apartment-edit/:id"
+              render={ (props) => {
+                let apartment = apartments.find(apartment => apartment.id === +props.match.params.id)
+                return (
+                  <ApartmentEdit
+                    editApartment={ this.editApartment }
+                    current_user={ current_user }
+                    apartment={ apartment }
+                  />
+                )
+              }}
             />
           }
           <Route component={ NotFound } />
