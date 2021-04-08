@@ -49,6 +49,8 @@ a:hover {
 
 // --INDEX--
 .cards.row {
+  display: flex;
+  justify-content: center;
   margin: 10px;
 }
 .card.card-body {
@@ -77,6 +79,11 @@ p.card-button {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 12px 22px 0 rgba(0, 0, 0, 0.19);
   width: 80%;
   padding: 60px;
+}
+
+// --NEW--
+.form-container {
+  margin: 100px;
 }
 
 @media (max-width:500px) {
