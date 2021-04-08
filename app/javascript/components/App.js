@@ -2,6 +2,7 @@ import React, { Component} from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
 import ApartmentIndex from './pages/ApartmentIndex'
+import ApartmentShow from './pages/ApartmentShow'
 import NotFound from './pages/NotFound'
 import {
   BrowserRouter as Router,
@@ -38,6 +39,14 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route path="/apartment-index" render={ (props) => <ApartmentIndex apartments={ apartments } /> } />
+          <Route
+            path="/apartment/:id"
+            render={ (props) => {
+              let id = +props.match.params.id
+              let apartment = apartments.find(a => a.id === id)
+              return <ApartmentShow apartment={ apartment } />
+            }}
+          />
           <Route component={ NotFound } />
         </Switch>
       </Router>

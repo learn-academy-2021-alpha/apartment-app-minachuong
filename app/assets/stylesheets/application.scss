@@ -7,6 +7,17 @@
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+h3 {
+  text-align: center;
+  padding: 20px;
+}
+
+.button {
+  background-color: #810000;
+  margin: 5px;
+
+}
+
 // --HEADER--
 .header-main {
   height: 100px;
@@ -29,17 +40,44 @@ a:hover {
   color: #1B1717;
 }
 
+// --HOME--
 .apartment-background {
   width: 100vw;
   position: fixed;
   opacity: .7;
 }
 
+// --INDEX--
+.cards.row {
+  margin: 10px;
+}
+.card.card-body {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 12px 22px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+p.card-button {
+  margin-top: 40px;
+}
+.fa-icon {
+  margin-right: 10px;
+}
 
-
-
-
-
+// --SHOW--
+.show-card-container {
+  display: flex;
+  justify-content: center;
+}
+.show-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 12px 22px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+  padding: 60px;
+}
 
 @media (max-width:500px) {
   .nav {
